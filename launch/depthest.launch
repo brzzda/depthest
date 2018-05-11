@@ -1,0 +1,54 @@
+<launch>
+  
+    <arg name="filter" default="none" />
+    <arg name="kf_meas" default="0.001" />
+    <arg name="kf_proc" default="0" />
+    <arg name="triang_window" default="13" />
+    <arg name="median_window" default="40" />
+
+    <arg name="varianceThresh" default="0.01" />
+    <arg name="poseChangeVariance" default="0.01" />
+    <arg name="estimator" default="dummy" />
+    <arg name="calibration_file" default="ardroneCamera.yaml" />
+    <arg name="image" default="/ardrone/image_raw" />
+    <arg name="odometry_topic" default="/std_pose" />
+    <arg name="feature_tracking_topic" default="/tracked_features" />
+    
+
+    <node pkg="depthest" type="depthest" name="depthest" output="screen">
+    
+        
+        <!-- Camera topic to subscribe to -->
+        <param name="filter" value="$(arg filter)" type="str" />
+        <param name="enable_measurement" value="false" type="bool" />
+        <param name="kf_process_noise_cov" value="$(arg kf_proc)" type="double"/>
+        <param name="kf_meas_noise_cov" value="$(arg kf_meas)" type="double" />
+        <param name="triangulation_sliding_window_size" value="$(arg triang_window)" type="int" />
+        <param name="median_filter_sliding_window_size" value="$(arg median_window)" type="int" />
+        <param name="pose_variance" value="$(arg varianceThresh)" type="double" />
+        <param name="pose_change_variance" value="$(arg varianceThresh)" type="double" />
+        <param name="estimator" value="$(arg estimator)" type="str" />
+        <param name="calibration_file" value="$(find depthest)/params/$(arg calibration_file)" type="str" />
+        <param name="image" value="$(arg image)" type="str" />
+        <param name="odometry_topic" value="$(arg odometry_topic)" type="str" />
+        <param name="feature_tracking_topic" value="$(arg feature_tracking_topic)" type="str" />
+        
+
+    </node>
+
+    <node pkg="depthest" type="visualizer" name="visualizer" output="screen" />
+
+<!-- only when svo and lk_flow packages are available 
+
+    <node pkg="depthest" type="remaper" name="remaper" output="screen" />  
+
+    <include file="$(find svo_ros)/launch/ardrone.launch" />
+	
+    <include file="$(find opencv_apps)/launch/lk_flow.launch">
+	<arg name="image" value="$(arg image)"/>
+    </include> 
+/-->
+
+        
+</launch>
+
