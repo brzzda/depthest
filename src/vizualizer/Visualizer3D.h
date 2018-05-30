@@ -10,7 +10,7 @@
 #include <visualization_msgs/Marker.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/PointStamped.h>
-#include <opencv-3.3.1/opencv2/core/mat.hpp>
+#include <opencv2/core/mat.hpp>
 #include <depthest/PointsStamped.h>
 
 
