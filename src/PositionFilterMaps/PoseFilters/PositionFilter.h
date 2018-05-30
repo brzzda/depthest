@@ -5,10 +5,7 @@
 #ifndef DEPTHEST_POSEFILTER_H
 #define DEPTHEST_POSEFILTER_H
 
-
-//#include <opencv2/opencv.hpp>
-//#include "opencv-3.3.1/opencv2/core/mat.hpp"
-#include "opencv-3.3.1/opencv2/core/mat.hpp"
+#include "opencv2/core/mat.hpp"
 
 class PositionFilter {
 public:
