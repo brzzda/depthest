@@ -11,7 +11,7 @@
 #include <message_filters/subscriber.h>
 #include <image_transport/publisher.h>
 #include <image_transport/image_transport.h>
-#include <opencv-3.3.1/opencv2/core/mat.hpp>
+#include <opencv2/core/mat.hpp>
 #include <depthest/PoseAndPointsStamped.h>
 #include <sensor_msgs/Image.h>
 #include <depthest/FlowArrayStampedAged.h>
