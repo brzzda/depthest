@@ -5,8 +5,7 @@
 #ifndef DEPTHEST_POSECHANGEVARIANCECALC_H
 #define DEPTHEST_POSECHANGEVARIANCECALC_H
 
-#include <opencv-3.3.1/opencv2/core/mat.hpp>
-
+#include <opencv2/core/mat.hpp>
 #include "PositionFilter.h"
 
 /**
