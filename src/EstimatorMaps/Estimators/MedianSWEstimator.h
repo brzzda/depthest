@@ -8,7 +8,7 @@
 
 
 #include <vector>
-#include <opencv-3.3.1/opencv2/core/mat.hpp>
+#include <opencv2/core/mat.hpp>
 #include <queue>
 #include "PositionEstimator.h"
 
