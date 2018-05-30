@@ -6,7 +6,7 @@
 #define DEPTHEST_POINTFILTERMAP_H
 
 #include <opencv2/opencv.hpp>
-#include "opencv-3.3.1/opencv2/core/mat.hpp"
+#include "opencv2/core/mat.hpp"
 
 /**
  * interface for wrapping Position estimators
