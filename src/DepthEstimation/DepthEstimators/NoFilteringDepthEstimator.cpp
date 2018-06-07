@@ -2,8 +2,8 @@
 // Created by peetaa on 27.4.2018.
 //
 
-#include "NoFilteringDepthEstimator.h"
-#include "HelperFunctions.h"
+#include <DepthEstimation/DepthEstimators/NoFilteringDepthEstimator.h>
+#include <HelperFunctions.h>
 
 NoFilteringDepthEstimator::NoFilteringDepthEstimator() : cameraMatrix(Camera::getInstance().getCameraMatrix()),
                                                    params(Params::getInstance()){

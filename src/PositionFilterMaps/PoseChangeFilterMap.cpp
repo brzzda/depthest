@@ -2,7 +2,7 @@
 // Created by peetaa on 27.4.2018.
 //
 
-#include "PoseChangeFilterMap.h"
+#include <PositionFilterMaps/PoseChangeFilterMap.h>
 
 void PoseChangeFilterMap::addPoint(int id, cv::Mat point) {
     pointVars[id].addPose(point);

@@ -1,41 +1,31 @@
 //
-// Created by peetaa on 27.4.2018.
-//
-
-#ifndef DEPTHEST_SIMPLEDEPTHESTIMATOR2_H
-#define DEPTHEST_SIMPLEDEPTHESTIMATOR2_H
-
-#include "DepthEstimators/DepthEstimator.h"
-
-
-//
 // Created by peetaa on 18.11.2017.
 //
+
+#ifndef DEPTHEST_DISPLACEMENTESTIMATOR_H
+#define DEPTHEST_DISPLACEMENTESTIMATOR_H
 
 //#include "ros/ros.h"
 #include <EstimatorMaps/EstimatorPointMapFactory.h>
 #include <Params.h>
-#include "DepthEstimator.h"
-#include "ErrorCalc.h"
+#include <PositionFilterMaps/PoseFilterMap.h>
+#include <PositionFilterMaps/PositionFilterMapFactory.h>
+#include "DepthEstimation/DepthEstimators/DepthEstimator.h"
+#include "Evaluation/ErrorCalc.h"
 #include "EstimatorMaps/Estimators/MedianEstimator.h"
 #include "EstimatorMaps/Estimators/MedianSWEstimator.h"
 #include "EstimatorMaps/Estimators/KalmanFilterEstimator.h"
+
+#include <iostream>
+#include <fstream>
+#include <string>
+
 /**
- * Depth estimation without usage of filters
+ * Depth estimator that use Position filters and Position estimators
  */
-class NoFilteringDepthEstimator : public DepthEstimator {
+class FilterDepthEstimator : public DepthEstimator {
 private:
-    std::queue<cv::Mat> poseBuffer;
-    std::queue<cv::Mat> pointsBuffer;
-
-    cv::Mat firstPose;
-    cv::Mat firstPoints;
-
-    int POINT_FILTER_TYPE;
-    const int displacement = 20u;
     cv::Mat lastPose;
-    cv::Mat lastPoints;
-    cv::Mat lastProjMatrix;
     cv::Mat cameraMatrix;
 
     Params& params;
@@ -43,33 +33,29 @@ private:
     ros::NodeHandle nh;
 
     std::queue<cv::Mat> poses;
-    // map of points history / int - id of point que. que - point appearance history
     std::map<int, std::queue<cv::Point2f>> points;
-
+    PositionFilterMapFactory poseVarianceMapFactory;
+    PoseFilterMap* poseVariacesMap;
     EstimatorPointMapFactory pointMapFactory;
     EstimatorPointMap* points3D;
-//    std::map<int, MedianEstimator> points3D;
-//    std::map<int, MedianSWEstimator> points3D;
-//    std::map<int, DummyEstimator> points3D;
-//    std::map<int, KalmanFilterEstimator> points3D;
-//    std::map<int, PositionEstimator> points3D;
-    std::map<int, cv::Mat> lastPoints3D;
 
     std::vector<cv::Point2f> secondViewPoints2D;
     std::vector<cv::Point2f> firstViewPoints2D;
-    std::vector<cv::Point2f> secondViewPoints2DOut;
-    std::vector<cv::Point2f> firstViewPoints2DOut;
+    std::vector<cv::Point2f> lastSecondViewPoints2D;
+    std::vector<cv::Point2f> lastFirstViewPoints2D;
     std::vector<int> ids;
 
-    int frameDisplacement;
-    int type_;
-//    Camera& camera;
 
+    int emptyFrameCount;
+    int frameDisplacement;
+    int filteredOutPoints;
+    double poseVarianceThresh;
     bool evaluationEnabled;
     ErrorCalc evaluator;
+    std::string varianceFilterType;
 public:
-    NoFilteringDepthEstimator();
-    ~NoFilteringDepthEstimator();
+    FilterDepthEstimator();
+    ~FilterDepthEstimator();
     void addPoint(cv::Point2f point, int id) override;
     void deletePoint(int id) override;
     void estimateDepth(cv::Mat &out) override;
@@ -82,5 +68,4 @@ public:
 };
 
 
-
-#endif //DEPTHEST_SIMPLEDEPTHESTIMATOR2_H
+#endif //DEPTHEST_DISPLACEMENTESTIMATOR_H

@@ -2,12 +2,12 @@
 // Created by Peter Zborovský on 29.10.2017.
 //
 
-#include "DepthEstimationNode.h"
+#include <DepthEstimation/NodeHandles/DepthEstimationNode.h>
 #include <tf2_msgs/TFMessage.h>
 #include <eigen3/Eigen/Eigen>
 #include <tf2_eigen/tf2_eigen.h>
 #include <opencv2/core/eigen.hpp>
-#include "HelperFunctions.h"
+#include <HelperFunctions.h>
 
 
 DepthEstimationNode::DepthEstimationNode() {

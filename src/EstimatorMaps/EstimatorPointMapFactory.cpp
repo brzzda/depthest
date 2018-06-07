@@ -3,7 +3,7 @@
 //
 
 #include <HelperFunctions.h>
-#include "EstimatorPointMapFactory.h"
+#include <EstimatorMaps/EstimatorPointMapFactory.h>
 
 EstimatorPointMap* EstimatorPointMapFactory::getPointMap(std::string pointMapType) {
     if (pointMapType == KALMAN_POINT_FILTER) {

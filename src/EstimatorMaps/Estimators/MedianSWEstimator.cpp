@@ -2,13 +2,10 @@
 // Created by peetaa on 22.4.2018.
 //
 
-#include "MedianSWEstimator.h"
-
-
 #include <iostream>
 #include <Params.h>
-#include "MedianSWEstimator.h"
-#include "HelperFunctions.h"
+#include <EstimatorMaps/Estimators/MedianSWEstimator.h>
+#include <HelperFunctions.h>
 
 
 MedianSWEstimator::MedianSWEstimator() {

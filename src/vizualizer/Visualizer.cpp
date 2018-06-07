@@ -4,9 +4,9 @@
 
 
 #include <ros/ros.h>
-#include "Visualizer3D.h"
-#include "DepthVisualizer.h"
-#include "ReprojectionVisualizer.h"
+#include <vizualizer/Visualizer3D.h>
+#include <vizualizer/DepthVisualizer.h>
+#include <vizualizer/ReprojectionVisualizer.h>
 
 
 

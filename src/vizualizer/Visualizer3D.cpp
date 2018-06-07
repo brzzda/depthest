@@ -3,8 +3,8 @@
 //
 
 #include <Params.h>
-#include "Visualizer3D.h"
-#include "HelperFunctions.h"
+#include <vizualizer/Visualizer3D.h>
+#include <HelperFunctions.h>
 
 
 Visualizer3D::Visualizer3D()

@@ -2,7 +2,7 @@
 // Created by peetaa on 27.4.2018.
 //
 
-#include "SWPoseFilterMap.h"
+#include <PositionFilterMaps/SWPoseFilterMap.h>
 
 void SWPoseFilterMap::addPoint(int id, cv::Mat point) {
     pointVars[id].addPose(point);

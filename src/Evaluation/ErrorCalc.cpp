@@ -3,8 +3,8 @@
 //
 
 #include <EstimatorMaps/Estimators/KalmanFilterEstimator.h>
-#include "ErrorCalc.h"
-#include "HelperFunctions.h"
+#include <Evaluation/ErrorCalc.h>
+#include <HelperFunctions.h>
 
 ErrorCalc::ErrorCalc() {
     pointCount = 0;

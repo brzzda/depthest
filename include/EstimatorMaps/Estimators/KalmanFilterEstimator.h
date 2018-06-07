@@ -6,7 +6,7 @@
 #define DEPTHEST_POINT3DKALMAN_H
 
 
-#include <opencv-3.3.1/opencv2/video.hpp>
+#include <opencv2/video.hpp>
 #include "PositionEstimator.h"
 
 class KalmanFilterEstimator : public PositionEstimator {

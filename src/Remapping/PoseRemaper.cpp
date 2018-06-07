@@ -2,7 +2,7 @@
 // Created by Peter Zborovský on 7.1.2018.
 //
 
-#include "PoseRemaper.h"
+#include <Remapping/PoseRemaper.h>
 
 PoseRemaper::PoseRemaper() {
     pose_sub = nh.subscribe<geometry_msgs::PoseWithCovarianceStamped>("svo/pose",1, &PoseRemaper::remapCallback, this);

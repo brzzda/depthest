@@ -4,7 +4,7 @@
 
 #include <HelperFunctions.h>
 #include <Params.h>
-#include "KalmanFilterEstimator.h"
+#include <EstimatorMaps/Estimators/KalmanFilterEstimator.h>
 
 KalmanFilterEstimator::KalmanFilterEstimator() {
     KF.init(3, 3, 0, CV_32F);

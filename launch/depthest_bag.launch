@@ -14,7 +14,13 @@
     <arg name="image" default="/ardrone/image_raw" />
     <arg name="odometry_topic" default="/std_pose" />
     <arg name="feature_tracking_topic" default="/tracked_features" />
+   
+    <arg name="rvizconfig" default="$(find depthest)/rviz_config.rviz" />
     
+    <param name="use_sim_time" value="true" />
+    <!-- read bagname from command line -->
+    <arg name="bag" />
+ 
 
     <node pkg="depthest" type="depthest" name="depthest" output="screen">
     
@@ -39,8 +45,11 @@
 
     <node pkg="depthest" type="visualizer" name="visualizer" output="screen" />
 
-    <arg name="rvizconfig" default="$(find depthest)/rviz_config.rviz" />
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+    <!-- run rosbag play with specified bag -->
+    <node pkg="rosbag" type="play" name="rosbag_play"
+       args="--clock --pause $(arg bag)" output="screen"/>
 
 <!-- only when svo and lk_flow packages are available 
 

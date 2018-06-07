@@ -3,7 +3,7 @@
 //
 
 #include <HelperFunctions.h>
-#include "DummyEstimator.h"
+#include <EstimatorMaps/Estimators/DummyEstimator.h>
 
 DummyEstimator::DummyEstimator() {
     pose = cv::Mat(3,1, CV_32FC1);

@@ -3,8 +3,8 @@
 //
 
 #include <iostream>
-#include "MedianEstimator.h"
-#include "HelperFunctions.h"
+#include <EstimatorMaps/Estimators/MedianEstimator.h>
+#include <HelperFunctions.h>
 
 
 MedianEstimator::MedianEstimator() {

@@ -3,7 +3,7 @@
 //
 
 #include <HelperFunctions.h>
-#include "PoseFilter.h"
+#include <PositionFilterMaps/PoseFilters/PoseFilter.h>
 
 PoseFilter::PoseFilter() {
     xAverage = 0;

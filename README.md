@@ -1,2 +1,3 @@
 # depthest
-Depth estimation based on odometry and image data
+
+Depth estimation based on odometry and image data.

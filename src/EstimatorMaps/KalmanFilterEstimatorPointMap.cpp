@@ -2,7 +2,7 @@
 // Created by peetaa on 23.4.2018.
 //
 
-#include "KalmanFilterEstimatorPointMap.h"
+#include <EstimatorMaps/KalmanFilterEstimatorPointMap.h>
 
 void KalmanFilterEstimatorPointMap::update(int id, cv::Mat point) {
     points3D[id].update(point);
