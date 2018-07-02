@@ -4,7 +4,7 @@
 
 #include <Params.h>
 #include <HelperFunctions.h>
-#include "SWPoseChangeFilter.h"
+#include <PositionFilterMaps/PoseFilters/SWPoseChangeFilter.h>
 
 SWPoseChangeFilter::SWPoseChangeFilter() {
     windowSize = Params::getInstance().getMedianFilterWindowSize();

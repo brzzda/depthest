@@ -3,8 +3,8 @@
 //
 
 #include <Params.h>
-#include "PositionFilterMapFactory.h"
-#include "HelperFunctions.h"
+#include <PositionFilterMaps/PositionFilterMapFactory.h>
+#include <HelperFunctions.h>
 
 PositionFilterMapFactory::PositionFilterMapFactory() {
     pointFilterType = Params::getInstance().getEstimatorName();

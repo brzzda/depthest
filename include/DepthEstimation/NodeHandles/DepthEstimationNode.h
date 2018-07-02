@@ -16,8 +16,8 @@
 #include <depthest/PointsStamped.h>
 #include <depthest/PoseAndPointsStamped.h>
 #include <depthest/FlowArrayStampedAged.h>
-#include "DepthEstimators/DepthEstimator.h"
-#include "DepthEstimatorFactory.h"
+#include <DepthEstimation/DepthEstimators/DepthEstimator.h>
+#include <DepthEstimation/DepthEstimatorFactory.h>
 
 /**
  * Depthestimation node

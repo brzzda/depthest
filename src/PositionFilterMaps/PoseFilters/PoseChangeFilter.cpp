@@ -2,7 +2,7 @@
 // Created by peetaa on 27.4.2018.
 //
 
-#include "PoseChangeFilter.h"
+#include <PositionFilterMaps/PoseFilters/PoseChangeFilter.h>
 #include <HelperFunctions.h>
 
 PoseChangeFilter::PoseChangeFilter() {

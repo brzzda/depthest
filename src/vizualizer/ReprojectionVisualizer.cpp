@@ -2,14 +2,13 @@
 // Created by peetaa on 19.4.2018.
 //
 
-#include "ReprojectionVisualizer.h"
-
-#include "DepthVisualizer.h"
+#include <vizualizer/ReprojectionVisualizer.h>
+#include <vizualizer/DepthVisualizer.h>
 #include <opencv2/opencv.hpp>
 #include <cv_bridge/cv_bridge.h>
 #include <Camera.h>
 #include <Params.h>
-#include "HelperFunctions.h"
+#include <HelperFunctions.h>
 
 ReprojectionVisualizer::ReprojectionVisualizer() : it(nh) {
 //    image_subscriber = new message_filters::Subscriber<sensor_msgs::Image> (nh, "image_undist", 1000);

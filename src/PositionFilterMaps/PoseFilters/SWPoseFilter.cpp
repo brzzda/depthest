@@ -3,7 +3,7 @@
 //
 
 #include <Params.h>
-#include "SWPoseFilter.h"
+#include <PositionFilterMaps/PoseFilters/SWPoseFilter.h>
 
 SWPoseFilter::SWPoseFilter() {
     count = 0;

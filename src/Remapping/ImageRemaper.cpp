@@ -2,7 +2,7 @@
 // Created by peetaa on 11.11.2017.
 //
 
-#include "ImageRemaper.h"
+#include <Remapping/ImageRemaper.h>
 #include <cv_bridge/cv_bridge.h>
 #include <Params.h>
 

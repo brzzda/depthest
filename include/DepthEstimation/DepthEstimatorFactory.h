@@ -5,9 +5,9 @@
 #ifndef DEPTHEST_DEPTHESTIMATORFACTORY_H
 #define DEPTHEST_DEPTHESTIMATORFACTORY_H
 
-#include <DepthEstimators/DepthEstimator.h>
-#include <DepthEstimators/NoFilteringDepthEstimator.h>
-#include <DepthEstimators/FilterDepthEstimator.h>
+#include <DepthEstimation/DepthEstimators/DepthEstimator.h>
+#include <DepthEstimation/DepthEstimators/NoFilteringDepthEstimator.h>
+#include <DepthEstimation/DepthEstimators/FilterDepthEstimator.h>
 
 /**
  * factory for creation of all DepthEstimator-s

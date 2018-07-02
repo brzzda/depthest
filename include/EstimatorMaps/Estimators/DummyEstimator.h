@@ -6,7 +6,7 @@
 #define DEPTHEST_DUMMYPOINTFILTER_H
 
 
-#include <opencv-3.3.1/opencv2/core/mat.hpp>
+#include <opencv2/core/mat.hpp>
 #include "PositionEstimator.h"
 
 class DummyEstimator : public PositionEstimator{

@@ -4,8 +4,8 @@
 
 
 #include <ros/ros.h>
-#include "ImageRemaper.h"
-#include "PoseRemaper.h"
+#include <Remapping/ImageRemaper.h>
+#include <Remapping/PoseRemaper.h>
 
 
 int main( int argc, char** argv ) {

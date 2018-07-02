@@ -2,8 +2,8 @@
 // Created by peetaa on 18.11.2017.
 //
 
-#include "FilterDepthEstimator.h"
-#include "HelperFunctions.h"
+#include <DepthEstimation/DepthEstimators/FilterDepthEstimator.h>
+#include <HelperFunctions.h>
 
 
 FilterDepthEstimator::FilterDepthEstimator() : cameraMatrix(Camera::getInstance().getCameraMatrix()),

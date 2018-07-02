@@ -2,7 +2,7 @@
 // Created by peetaa on 23.4.2018.
 //
 
-#include "MedianSWEstimatorPointMap.h"
+#include <EstimatorMaps/MedianSWEstimatorPointMap.h>
 
 void MedianSWEstimatorPointMap::update(int id, cv::Mat point) {
     points3D[id].update(point);

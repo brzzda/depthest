@@ -1,7 +1,7 @@
-#include "ros/ros.h"
-#include "std_msgs/String.h"
-#include "tf2_msgs/TFMessage.h"
-#include "NodeHandles/DepthEstimationNode.h"
+#include <ros/ros.h>
+#include <std_msgs/String.h>
+#include <tf2_msgs/TFMessage.h>
+#include <DepthEstimation/NodeHandles/DepthEstimationNode.h>
 
 
 int main(int argc, char **argv)
