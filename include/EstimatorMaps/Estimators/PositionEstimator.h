@@ -7,11 +7,7 @@
 
 
 #include <opencv2/opencv.hpp>
-<<<<<<< HEAD:include/EstimatorMaps/Estimators/PositionEstimator.h
 #include <opencv2/core/mat.hpp>
-=======
-#include "opencv2/core/mat.hpp"
->>>>>>> 40db694c8c80faf5f02e43472b8efa6d6c640ed1:src/EstimatorMaps/Estimators/PositionEstimator.h
 //#include <ros/ros.h>
 
 class PositionEstimator {
